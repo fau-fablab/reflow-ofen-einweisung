@@ -1,0 +1,375 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% COPYRIGHT: (C) 2012-2015 FAU FabLab and others
+% Bearbeitungen ab 2015-02-20 fallen unter CC-BY-SA 3.0
+% Sobald alle Mitautoren zugestimmt haben, steht die komplette Datei unter CC-BY-SA 3.0. Bis dahin ist der Lizenzstatus aller alten Bestandteile ungeklärt.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\newcommand{\basedir}{fablab-document}
+\documentclass{\basedir/fablab-document}
+
+\usepackage{minitoc} % Inhaltsübersicht je Section
+% \usepackage{fancybox} %ovale Boxen für Knöpfe - nicht mehr benötigt
+\usepackage{amssymb} % Symbole für Knöpfe
+% \usepackage{subfigure,caption}
+\usepackage{eurosym}
+\usepackage{tabularx} % Tabellen mit bestimmtem Breitenverhältnis der Spalten
+\usepackage{todonotes}
+
+\renewcommand{\texteuro}{\euro}
+
+\linespread{1.2}
+
+\date{Oktober 2014}
+\author{julian.neureuther@fablab.fau.de}
+\title{Einweisung Reflow-Ofen}
+
+\begin{document}
+ % Hinweise an Package minitoc, doch bitte irgendwas zu generieren - wird für späteres \secttoc benötigt
+\dosecttoc
+\faketableofcontents
+\mtcsettitle{secttoc}{Arbeitsschritte}
+\mtcsettitlefont{secttoc}{\large \sffamily \bfseries}
+\mtcsetfont{secttoc}{subsection}{\sffamily}
+% \mtcset
+% hier geht das eigentliche Dokument los
+
+\color{red}
+\hrule
+\begin{center}
+\large{Achtung! Einweisung ist noch in Arbeit!}
+\vspace{0.1cm}
+\end{center}
+\hrule
+\color{black}
+
+\section[Regeln und (Sicherheits-)Hinweise]{Regeln und Hinweise}
+\begin{itemize}
+\item Bestimmungsgemäße Verwendung:
+\begin{itemize}
+\item Der Reflow-Ofen ist nur für Lötvorgänge geeignet (z.\,B. für das Löten von SMD-Bauteilen auf einer Platine)
+\item Er ist \textbf{nicht} geeignet für die Zubereitung von Speisen, zum Trocknen von Gegenständen o.\,ä., oder für andere nicht bestimmungsgemäße Tätigkeiten.
+\end{itemize}
+\item Sicherheitshinweise:
+\begin{itemize}
+\item Der Reflow-Ofen ist nur für trockene Innenräume geeignet, er darf nicht feucht oder nass werden. Nicht mit nassen Händen anfassen!
+\item Es muss ausreichend Abstand zu brennbaren Gegenständen gehalten werden, der Ofen wird während des Betriebs vor allem auf der Oberseite sehr heiß. \\
+Keine Gegenstände auf den Ofen stellen und darauf achten, dass keine Kabel mit der Gehäuseoberseite in Berührung kommen. Nach dem Betrieb warten, bis der Ofen abgekühlt ist und erst dann wieder aufräumen.
+\item Während des Lötvorgangs entstehen gesundheitsschädliche Dämpfe, deshalb auf gute Belüftung achten! (Fenster aufmachen!)
+\item Der Ofen darf nie unbeaufsichtigt betrieben werden!
+\end{itemize}
+\end{itemize}
+
+\section{Kosten}
+% \definecolor{grau}{gray}{.5}
+% \newcommand{\mitgebracht}[1]{\textcolor{grau}{(#1)}}
+Du zahlst im Kassenterminal nur den Preis für die verbrauchte Lötpaste (unbedingt vor und nach der Verwendung mit der Feinwaage wiegen). \\
+
+\color{red}
+\hrule
+\begin{center}
+\large{Ab hier noch alte Platineneinweisung.}
+\todo{Will man die wirklich? Eigentlich ist das Reflow-Löten ja vollkommen vom Platinenätzen getrennt.}
+
+Ablauf in etwa:
+\begin{itemize}
+\item 2h Zeit haben, da der Ofen nachher auch wieder aufgeräumt werden will
+\item Platine reinigen
+\item Schablone fertigen aus Overhead-Folie mit Schneideplotter
+\item Paste wiegen
+\item Rakeldingsi zusammenbauen
+\item Paste aufrakeln
+\item Platine bestücken, Kunststoffbauteile am besten weglassen oder mit Kapton etwas schützen
+\item Controller programmieren
+\item Platine vorsichtig einlegen
+\item Kurve programmieren
+\item ab dafür
+\item Ofen öffnen, wenn Controller es sagt
+\item auskühlen lassen und dann AUFRÄUMEN
+\end{itemize}
+\vspace{0.1cm}
+\end{center}
+\hrule
+\color{black}
+
+\section{Einseitige Platinen}
+\secttoc
+
+\subsection{Vorbereiten}
+\label{sec:vorbereiten}
+Ätzbad und Verzinnungsbad einschalten. Geld für die Platine bezahlen. \textbf{TODO: } Verzinnungsbad außer Betrieb, Anschalten/Einfüllen erklären
+
+\subsection{Ausdrucken des Layouts}
+\label{sec:ausdrucken}
+Das Layout wird auf A4 Papier mit sehr hoher Tonerdeckung ausgedruckt.
+\begin{itemize}
+\item Doppelseitige Layouts: Oberseite muss bei KiCAD gespiegelt gedruckt (Druckeinstellungen KiCAD beachten) werden, am besten mit Text überprüfen. Unterseite nicht gespiegelt.
+\item Layout mit hoher Tonerdeckung (kein Eco-Mode) spiegelverkehrt auf Papier ausdrucken. Üblicherweise (KiCAD, Eagle) wird dabei die Lötseite (Unterseite) so gedruckt, wie sie auf dem Bildschirm angezeigt wird. Bei doppelseitigen Platinen kommt noch die Bestückungsseite (Oberseite) hinzu, diese wird im Vergleich zur Bildschirmanzeige gespiegelt.
+\item Text, der am Ende lesbar sein soll, muss auf dem Papier spiegelverkehrt sein.
+\end{itemize}
+
+
+\subsection{Zusägen (wenn nötig)}
+\label{sec:zusaegen}
+\begin{itemize}
+\item Wenn nötig: Platine mit Säge zusägen. Blaue Schutzfolie noch drauf lassen!
+\end{itemize}
+\begin{itemize}
+\item Wenn die Platine flächig in einen Schraubstock eingespannt wird, muss dieser Gummibacken haben, ansonsten wird die Photoschicht beschädigt.
+\item Wenn mit der Laubsäge gesägt wird (für feine Schnitte):
+	\begin{itemize}
+	\item Vorsicht, die Laubsäge sägt nie ganz gerade, wenn sie schief sägt, einfach gegenlenken.
+	\item Laubsägeblatt nach dem Sägen wieder an einer Seite der Säge ausspannen, sonst verbiegt sich die Laubsäge.
+%	\item Nach dem Sägen Blatt wieder an einer Seite ausspannen
+	\end{itemize}
+\item Sägekante mit Feile entgraten, damit keine Fransen nach oben überstehen und für Unschärfe am Rand sorgen.
+\end{itemize}
+\subsection{Belichten}
+\label{sec:belichten}
+Beim Belichten wird der Photolack durch UV-Bestrahlung an den Stellen, an denen am Ende keine Leiterbahn sein soll, chemisch umgewandelt.
+
+\begin{itemize}
+\item warten bis beim Ätzer mindestens 35°C erreicht sind (Aufheizzeit ca 30min)
+\item Belichter ausschalten, Belichterdeckel öffnen
+\item obere Glasscheibe hochklappen. Wenn es schwer geht, dabei die \enquote{Öffnen}-Taste gedrückt halten.
+\item Blaue Schutzfolie von der Platine abziehen
+\item Platine mit der Photoschicht nach oben auf die untere Glasscheibe legen
+\item Darauf das ausgedruckte Platinenlayout legen. Die bedruckte Seite muss direkt auf der photobeschichteten Seite der Platine liegen, ansonsten ist es spiegelverkehrt und leicht unscharf!
+\item Platine mit Layout im Belichter positionieren: ausreichend Abstand vom Rand des Belichters halten.
+\item Obere Glasscheibe herunterklappen
+\item Belichter einschalten. Warten bis die Druckanzeige beim Enddruck (-0,3 bar) angekommen ist, jetzt ist das Layout an die Platine angedrückt.
+\item Deckel schließen
+\item Rechten Auswahlschalter auf \enquote{nur oben} (einseitige Platinen) bzw. \enquote{oben und unten} (doppelseitige Platinen) stellen. 
+\item Empfohlene Belichtungszeit nachlesen (steht normalerweise beim Belichter auf einem Aufkleber)
+\item Belichtungszeit einstellen: Knopf 1 Schritt drehen, Sekunden-Anzeige blinkt.
+\item Sekunden (Einerstelle) einstellen, Knopf drücken.
+\item Sekunden (Zehnerstelle) einstellen, Knopf drücken.
+\item Minuten einstellen, Knopf drücken.
+\item Jetzt blinken alle drei Stellen. Knopf drücken zum Starten, drehen zum Ändern.
+\item Die Zeit läuft. Zum Pausieren und Fortsetzen drücken.
+\end{itemize}
+
+
+\subsection{Entwickeln}
+\label{sec:entwickeln}
+Beim Entwickeln wird der belichtete Photolack chemisch umgewandelt und abgewaschen.
+
+\begin{itemize}
+\item Schutzbrille aufsetzen
+\item Kunststoffschale und Flasche mit Natriumhydroxidlösung holen
+\item Wenn nur noch eine Flasche NaOH-Lösung vorrätig ist, Betreuer benachrichtigen, damit rechtzeitig Nachschub angemischt wird
+\item Papiertücher bereitlegen
+\item Platine aus Belichter entnehmen, in Schale mit Photoseite nach oben legen, etwas NaOH-Lösung rein, damit die Platine bedeckt ist
+\item ca. 20-30s schwenken bis keine neue braune Färbung mehr entsteht
+\item Platine mit Kunststoffpinzette aus dem Entwickler entnehmen (zur Not auch mit der Hand) und sofort abwaschen, dabei unter fließendem Wasser vorsichtig mit dem Daumen abreiben, damit sich letzte Stücke des Photolacks lösen können.
+\item Der benutzte Entwickler kann später beim Entschichten nochmal verwendet werden. Soll nicht entschichtet werden, die Schale ausgießen, gründlich abwaschen und zum Trocknen stellen.
+\item Der Entwickler ist Lauge und entfettet daher die Hände, bzw. greift die Haut leicht an, daher ggf. nach dem Entwickeln Hände waschen und mit einer kleinen Menge Hautcreme eincremen. Die Creme steht beim Waschbecken.
+\end{itemize}
+
+\subsection{Ätzen}
+\label{sec:aetzen}
+Beim Ätzen wird die Kupferschicht an den belichteten und entwickelten Stellen entfernt. Leiterbahnen sind durch Photolack geschützt.
+
+\begin{itemize}
+\item Warten, bis Ätzbad 40°C erreicht hat
+\item Schutzbrille aufsetzen
+\item Ätzgerät ausschalten, damit keine Spritzer den Tisch versiffen
+\item Platinenhalter aus Ätzbad entnehmen, diesen mit Wasser abspülen, beim Transport zum Waschbecken bitte eine Schale drunter halten, damit nichts auf den Boden tropft
+\item Platine mit der Photoseite nach vorne (so, dass man beim Ätzen auch etwas sieht) in Halter klemmen, falls die Breite nicht passt, Halterarm verschieben. Wenn der Halterarm schwergängig ist, Schraube etwas lösen und so lassen.
+\item Halter in das Ätzbad stellen, Gerät wieder anschalten
+\item Jetzt darf die Schutzbrille wieder abgenommen werden.
+\item Ätzvorgang regelmäßig beobachten: Erst werden die zu ätzenden Stellen rosa (Kupferschicht wird dünner), schließlich werden sie grünlich und Licht kann durch die Platine durchscheinen (Kupferschicht ist weg).
+\item Unterbrechen ist möglich, wenn man die Platine herausnimmt und gründlich abwäscht.
+\item Sobald alle Stellen weggeätzt sind, sich nichts mehr tut, oder Leiterbahnen angefressen werden, den Ätzvorgang beenden:
+\begin{itemize}
+ \item Schutzbrille aufsetzen
+ \item Ätzgerät ausschalten
+ \item Platinenhalter mit Platine entnehmen, mit Wasser abspülen
+\end{itemize}
+ 
+\end{itemize}
+
+\subsection{Entschichten}
+\label{sec:entschichten}
+Beim Entschichten wird der Photolack auf den Leiterbahnen entfernt, damit man sie löten, durchkontaktieren und verzinnen kann.
+
+\begin{itemize}
+\item Schutzbrille aufsetzen
+\item Wenn du die Platine nicht in Kürze (wenige Tage) löten, aber nicht verzinnen willst, solltest du vor diesem Schritt aufhören. Zu Hause kannst du den Photolack dann auch mit Aceton und einem Küchentuch entfernen.
+\item Platine (ohne Papier dazwischen) nochmal 2 Minuten belichten.
+\item in Schale legen, mit der vorher aufgehobenen NaOH-Lösung schwenken bis keine braune Farbe mehr kommt
+\item Schale in Waschbecken entleeren; Platine und Schale abspülen
+\end{itemize}
+
+
+\subsection{Verzinnen}
+\label{sec:verzinnen}
+das Verzinnungsbad arbeitet bei 30-40° ideal.
+
+\textbf{TODO: Zinnbad ist außer Betrieb, neues Zinnbad bauen und Benutzung erklären.}
+
+\begin{itemize}
+\item da sich Ätzbad und Verzinnung gegenseitig zerstören, muss die Platine vor dem Verzinnen auf jeden Fall gründlich abgewaschen und ggf. mit Aceton oder der Entwicklerlösung, die zum Entschichten verwendet wurde entfettet werden
+\item Platine danach nicht mehr mit den Fingern auf den Flächen anfassen, da Fett verhindert, dass sich Zinn abscheiden kann. Die Platine wird dann unansehnlich und der Zinnfilm hält nicht richtig
+\item Die Platine sollte direkt nach den vorherigen Arbeitsschritten verzinnt werden, nicht erst Stunden später. Ansonsten muss sie nochmals kurz angeätzt werden (30 Sekunden ins warme Ätzbad), um störende Oxide auf der Kupferschicht zu entfernen.
+\item Doppelseitige Platinen: 
+\item gereinigte und ggf. durchkontaktierte Platine wie beim Ätzbad in den Halter klemmen und im Zinnbad versenken
+\item nach etwa einer Minute herausnehmen, Schüssel darunterhalten und abwaschen. (Schüssel auswaschen nicht vergessen)
+\item die Zinnschicht sollte sich nicht mehr mit einem Lappen abreiben lassen, dann ist die Platine fertig
+\item nach getaner Arbeit beide Bäder und Blubberpumpen wieder ausschalten (Schalter an der Steckdosenleiste verwenden)
+\end{itemize}
+verzinnte Platinen können gelagert und später gelötet werden, da das Zinn dafür sorgt, dass die Platine nicht mehr vom Luftsauerstoff angegriffen werden kann.
+
+\subsection{Bohren}
+\label{sec:bohren}
+Es wird empfohlen, vor dem Bohren zu entschichten. Bei anderer Reihenfolge gibt oft unschöne Photolackreste an Lochrändern.
+
+\begin{itemize}
+\item Proxxon Feinbohrgerät verwenden (siehe nächster Abschnitt).
+\item Vorsicht, der Arretierungsknopf vorne am Gerät darf nur bei Stillstand betätigt werden, sonst geht es kaputt!
+\item Wenn du das Gerät von Hand hältst (nur für Fortgeschrittene): Darauf achten, dass das Gerät senkrecht zur Platine gehalten wird, damit der Bohrer nicht abbricht. Beim Bohren ein Stück Holz unterlegen.
+\item Die Lampe anschalten oder gleich den ganzen Bohrständer ans Fenster stellen: mit richtigem Licht geht es deutlich einfacher, die Löcher zu treffen
+\item Bohrständer so einstellen, dass die Höhe stimmt und der Bohrer nicht in das Metall des Bohrständers bohrt
+\item alle normalen Löcher (ICs, Widerstände) mit 0,8mm oder 0,9mm Bohrer bohren, Stiftleiste mit mindestens 0,9mm
+\item Durchkontaktierungen nur mit dem 0,9mm VHM(!)-Bohrer bohren
+\item Dann größere Löcher bohren (bis 3mm mit der Proxxon, alles weitere mit der Standbohrmaschine)
+\end{itemize}
+
+\subsubsection{Bohrerwechsel beim Proxxon Feinbohrgerät}
+\begin{itemize}
+ \item ausschalten, Gerät aus Bohrständer ausbauen
+ \item Arretierungsknopf drücken und Spannzange abschrauben (von Hand oder mit dem danebenliegenden Spezialschlüssel)
+ \item Spannzange und Bohrer entnehmen, neuen Bohrer und dazu passende Spannzange einsetzen.
+ \item Spannzange festschrauben (nur von Hand, um übermäßige Kraft zu vermeiden -- nicht mit Werkzeug festziehen!!)
+ \item Gerät wieder in Schraubstock einbauen.
+ \item Bohrständer so einstellen, dass die Höhe stimmt und der Bohrer nicht in das Metall des Bohrständers bohrt
+\end{itemize}
+
+\subsubsection{Bohren mit VHM-Bohrern}
+Achtung: VHM-Bohrer (VollHartMetall) brechen sehr sehr leicht ab und sind auch deutlich teurer (ca. 1€/Stück) als ein normaler (HSS) Bohrer, dafür verschleißen sie quasi nicht und bohren viel sauberere Löcher.
+Für die Durchkontaktierungen bei doppelseitigen Platinen ist der VHM-Bohrer unumgänglich.
+\begin{itemize}
+\item die VHM-Bohrer sind in einer Extrakiste im Schrank und müssen nach Gebrauch \emph{sofort} wieder zurück in die Kiste
+\item ACHTUNG: mit VHM-Bohrern ist kein Aufbohren (Vergrößern vorhandener Löcher) möglich, der Bohrer bricht sofort ab!
+\item Bohrerwechsel wie unter ``Bohren'' angegeben durchführen (größte vorhandene Spannzange verwenden) und gewünschten Bohrer einspannen
+\item Für Durchkontaktierungen (Vias) wird der 0,9mm Bohrer benötigt.
+\item beim Bohren nicht wackeln oder die Platine verschieben
+\item Platine gut festhalten, der Bohrer rupft ein kleines bisschen beim Durchtritt durch das Platinenmaterial
+\item Bohrer nach der Arbeit IMMER wieder AUSSPANNEN und AUFRÄUMEN!!
+\end{itemize}
+
+
+
+
+\subsection{Abschluss}
+\newcommand{\abschluss}{
+\begin{itemize}
+ \item Bezahlen
+ \item Geräte ausschalten
+ \item Aufräumen: Bitte verlasse die Werkstatt etwas ordentlicher, als du sie vorgefunden hast: Räume herumliegendes Werkzeug auf, entferne Dreck von der Werkbank und werfe Müll weg.
+ \item Vielen Dank und viel Spaß mit deiner Platine.
+\end{itemize}}
+
+\abschluss
+
+\newpage
+
+
+\section{doppelseitiges Layout}
+
+Das Vorgehen ist ähnlich wie beim einseitigen Layout im vorherigen Abschnitt, jedoch mit leichten Änderungen. Man sollte vorher das Vorgehen bei einseitigen Platinen verstanden haben.
+\secttoc
+
+\subsection{Vorbereiten}
+siehe \ref{sec:vorbereiten}
+
+\subsection{Ausdrucken des Layouts}
+Grundsätzlich wie in \ref{sec:ausdrucken}, aber mit der Besonderheit, dass zwei Lagen ausgedruckt und zueinander positioniert werden müssen:
+
+\subsubsection{Tasche falten}
+\begin{itemize}
+\item die beiden Layouts sollten schon am PC für doppelseitige Fertigung vorbereitet werden (z.B. PDF oder PS mit Inkscape bearbeiten), d.h. beide auf einem Blatt und eines um 180° gedreht, damit sich das Blatt so falten lässt, dass beide Layouts übereinander liegen.
+\item im Gegenlicht (z.B. am Fenster) die beiden Layouts übereinander positionieren, dass sie deckungsgleich werden und aufeinander zu zeigen: Blatt in der Mitte umfalten (noch nicht knicken) und vom oberen Rand aus die Seiten auf Deckung aufeinanderschieben.
+\item Blatt in der Mitte knicken und den Knick anreiben (falzen) dabei immer die Deckung kontrollieren.
+\item je genauer die beiden Seiten übereinander positioniert werden, desto besser wird die Platine, daher hier präzise arbeiten!
+\end{itemize}
+\subsubsection{alternativ: zwei Blätter zusammenkleben}
+Alternativ kann man Ober- und Unterseite auf zwei getrennte Blätter Papier ausdrucken und diese dann mit Tesa zueinander positionieren. \textbf{TODO:} Wie macht man das am besten? Tipps?
+
+\subsection{Zusägen}
+siehe \ref{sec:zusaegen}
+
+\subsection{Belichten}
+wie \ref{sec:belichten}, jedoch muss zusätzlich folgendes beachtet werden:
+
+\begin{itemize}
+\item Tasche in den Belichter legen und wieder etwas auffalten, dabei nicht den Falz beschädigen
+\item Der Falz muss nach hinten, also in Richtung Scharnier des Belichters zeigen
+\item Platine auf das Papier legen und Tasche zuklappen und glattstreichen
+\item Beim Belichter den Schalter für die Lampen auf ``beide Lampen'' stellen.
+\item Scheibe vorichtig herunterklappen, einschalten und Vakuum abwarten, dabei kontrollieren, ob sich etwas verschiebt.
+\item wenn nicht, Belichter starten und Belichten (wie bei einseitigen Platinen)
+\end{itemize}
+
+\subsection{Entwickeln}
+Wie \ref{sec:entwickeln}, aber die Platine bereits nach der halben Zeit wenden und weiter schwenken, um auch die Rückseite gleich gut zu entwickeln. Eventuell etwas mehr Entwickler als bei einseitigen Platinen verwenden.
+
+\subsection{Ätzen}
+siehe \ref{sec:aetzen}
+
+\subsection{Entschichten}
+Wie in \ref{sec:entschichten} vorgehen.
+
+Dann die Platine abtrocken, da es jetzt -- anders als bei einseitigen Platinen -- mit dem Bohren weitergeht.
+
+\subsection{Bohren}
+Das Vorgehen ist wie in \ref{sec:bohren}. Für Durchkontaktierungen müssen auf jeden Fall die VHM-Bohrer verwendet werden!
+
+\subsection{Durchkontaktieren mit der DuKo-Presse}
+Im FabLab verwenden wir genietete Durchkontaktierungen, da chemisches Durchkontaktieren sehr teuer und aufwändig ist. Die Presse nietet Hohlnieten durch vorher gebohrte Löcher in der Platine. Das Werkzeug der DuKo-Presse ist recht teuer (fast 100€!), daher bitte mit Sachverstand vorgehen und bei Zweifel lieber fragen.
+\begin{itemize}
+\item Platine muss vor dem Durchkontaktieren entschichtet und sauber sein, aber noch nicht verzinnt!
+\item Die Dose mit den Nieten nicht offen stehen lassen, die Nieten sind bei einem Wackler an der Dose weg oder verbiegen beim Herunterfallen. Heruntergefallene Nieten dürfen nicht wieder zurückgefüllt werden, sondern müssen bezahlt und getrennt gesammelt werden.
+\item Niet in die Platine einsetzen oder mit der flachen Seite auf das untere Werkzeug der Presse aufsetzen
+\item Platine in die Presse legen (flache Seite der Niete nach unten) oder Platine auf den Niet aufsetzen und andrücken
+\item Die flache Seite des Niets bleibt auch flach, die andere ist etwas dicker. Wenn Durchkontaktierungen unter SMD-ICs sitzen, muss die flache Seite beim IC sein, damit die DuKo nicht im Weg ist.
+\item Vernieten: dazu kontrollieren, dass der Niet oben aus der Platine herausschaut und danach den Hebel der Presse bis auf den Anschlag herunterdrücken
+\item Die Durchkontaktierung ist jetzt fertig, mit nächster weitermachen
+\end{itemize}
+
+\subsection{Verzinnen}
+Bei doppelseitigen Platinen wird erst ganz am Ende verzinnt wird, damit die Durchkontaktierungen chemisch verbunden werden. Deshalb ist jetzt zusätzlicher Aufwand nötig, um Fingerabdrücke zu entfernen.
+\begin{itemize}
+ \item Platine in etwas Entwicklerlösung schwenken
+ \item kräftig abspülen, dabei nicht mehr mit den Fingern auf die Kupferschicht langen!
+ \item Verzinnen wie in \ref{sec:verzinnen} beschrieben
+\end{itemize}
+
+\subsection{Abschluss}
+Genau wie bei einseitigen Platinen:
+
+\abschluss
+
+\section{Wartungsarbeiten (nur Betreuer)}
+
+\subsection{Wechseln der Ätzlösung (nur Betreuer)}
+\begin{itemize}
+\item Dies ist normalerweise nicht erforderlich, und nur Betreuern erlaubt, um Verschwendung zu vermeiden.
+\item Die Ätzlösung ist verbraucht, wenn sie deutlich blau gefärbt ist \emph{und} das Ätzen sehr lange dauert \emph{und} die Ergebnisse nicht mehr zufriedenstellend sind (Unterätzung am Rand von Leiterbahnen, kein schnelles Anätzen blanker Kupferstellen).
+\item Ätzer ausschalten
+\end{itemize}
+\begin{itemize}
+\item Heizung, Thermometer, Platinenhalter raus und abwaschen
+\item Ätzer mit Trichter in den Behälter „kupferhaltige, saure Abfälle“ entleeren
+\item Wenn der Behälter mehr als halb voll ist, Philipp benachrichtigen
+\item Ätzer auswaschen
+\item Schale, in der der Ätzer normalerweise steht, abwaschen
+\item Heizer und Thermometer rein
+\item 400g Na-Persulfat-Pulver (zwei Drittel einer Packung ÄTZMITTEL 600G von Reichelt) mit Papiertrichter in Ätzer einfüllen (normaler Trichter ist zu eng)
+\item Mit dem Becherglas Wasser auffüllen, es etwa 1cm unter dem Ablaufrohr steht
+\item Einschalten, warten, ab und zu mit Glas- oder Plastikstab rühren
+\item Sobald keine festen Teilchen mehr zu sehen sind und die Flüssigkeit klar aussieht, kann der Ätzer wieder normal benutzt werden. Eine eventuelle dunkelgraue Färbung der Flüssigkeit kann dabei ignoriert werden, sie verschwindet nach den ersten Benutzungen.
+\end{itemize}
+
+
+\end{document}

@@ -15,6 +15,7 @@ git clone --recursive git@github.com:fau-fablab/reflow-ofen-einweisung.git
 Technische Details zum Buildserver siehe auf macgyver `/home/buildserver/README`
 
 [![Build Status](https://user.fablab.fau.de/~buildserver/reflow-ofen-einweisung/status.svg)](https://user.fablab.fau.de/~buildserver/reflow-ofen-einweisung/)
+[![TODOs](https://user.fablab.fau.de/~buildserver/reflow-ofen-einweisung/status-todos.svg)](https://user.fablab.fau.de/~buildserver/reflow-ofen-einweisung/)
 
 Lizenz
 ------

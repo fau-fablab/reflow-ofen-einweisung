@@ -1,2 +1,2 @@
-TARGET=einweisung_reflow-ofen betriebsanweisung_reflow-ofen Einweisungsliste_Reflowofen
+TARGET=betriebsanweisung_reflow-ofen einweisung_reflow-ofen Einweisungsliste_Reflowofen
 include fablab-document/Makefile.include

@@ -8,7 +8,6 @@
 \newcommand{\basedir}{fablab-document}
 \documentclass{\basedir/fablab-document}
 
-\usepackage{minitoc} % Inhaltsübersicht je Section
 % \usepackage{fancybox} %ovale Boxen für Knöpfe - nicht mehr benötigt
 \usepackage{amssymb} % Symbole für Knöpfe
 % \usepackage{subfigure,caption}
@@ -19,21 +18,12 @@
 
 \renewcommand{\texteuro}{\euro}
 
-\linespread{1.2}
+% \linespread{1.2}
 
-\date{Oktober 2014}
-\author{julian.neureuther@fablab.fau.de}
+\author{kontakt@fablab.fau.de}
 \title{Einweisung Reflow-Ofen}
 
 \begin{document}
- % Hinweise an Package minitoc, doch bitte irgendwas zu generieren - wird für späteres \secttoc benötigt
-\dosecttoc
-\faketableofcontents
-\mtcsettitle{secttoc}{Arbeitsschritte}
-\mtcsettitlefont{secttoc}{\large \sffamily \bfseries}
-\mtcsetfont{secttoc}{subsection}{\sffamily}
-% \mtcset
-% hier geht das eigentliche Dokument los
 
 \color{red}
 \hrule
@@ -43,63 +33,18 @@
 \end{center}
 \hrule
 \color{black}
-
-\section{Gefahren für Mensch und Maschine}
-
-\begin{itemize}
-	\item Verbrennungsgefahr an heißen Teilen, auch das Gehäuse erhitzt sich stark.
-	\item Überhitzung der Platine oder des Ofens und dadurch Brandgefahr.
-	\item gesundheitsschädliche Dämpfe
-	\item Hautkontakt mit Lötpaste.
-\end{itemize}
-
-\section{Schutzmaßnahmen und Verhaltensregeln}
-
-%\subsection{Generell}
-\begin{itemize}
-	\item Sorgfältig arbeiten -- du brauchst 2 Stunden Zeit, bis alles abgekühlt und verräumt ist! 
-	\item Ofen vorher auf Mängel und mögliche Probleme kontrollieren.
-	\item Während der Ofen warm bzw. in Betrieb ist, dürfen keine brennbaren Gegenstände im Ofen sein. 
-	\item Der Ofen muss frei stehen und es darf nichts auf dem Ofen abgestellt werden. Auf keinen Fall im Regal oder in der Nähe von brennbaren Gegenständen betreiben.
-\item Es muss ausreichend Abstand zu brennbaren Gegenständen gehalten werden, der Ofen wird während des Betriebs vor allem auf der Oberseite sehr heiß. Darauf achten, dass keine Kabel mit der Gehäuseoberseite in Berührung kommen.
-	\item \textbf{Der Ofen muss ständig beaufsichtigt werden}, solange er eingesteckt oder noch heiß ist.
-\item Bestimmungsgemäße Verwendung:
-\begin{itemize}
-\item Der Reflow-Ofen ist nur für Lötvorgänge geeignet (z.\,B. für das Löten von SMD-Bauteilen auf einer Platine)
-\item Er ist \textbf{nicht} geeignet für die Zubereitung von Speisen, zum Trocknen von Gegenständen, Aushärten von Kleber o.\,ä., oder für andere nicht bestimmungsgemäße Tätigkeiten.
-\item Der Controller darf nur für diesen Ofen verwendet werden.
-\end{itemize}
-	\item Ofen nach Gebrauch ausstecken und -- nachdem alles abgekühlt ist -- Ofen und Zubehör wieder aufräumen.
-	\item Der Reflowcontroller darf vom Laien nicht verstellt werden. Dies ist ausschließlich Betreuern mit ausreichender Kenntnis der Bedienungsanleitung erlaubt. Wurden Änderungen vorgenommen, sind diese nach Benutzung wieder auf die Standardeinstellungen zurückzusetzen.
-\item Während des Lötvorgangs entstehen gesundheitsschädliche Dämpfe, deshalb auf gute Belüftung achten! (Fenster aufmachen!)
-\end{itemize}
-
-\section{Verhalten bei Störungen und im Gefahrenfall}
-\begin{itemize}
-	\item Bei Schäden oder Störungen am Gerät: Gerät vom Stomnetz trennen und Betreuer informieren. Schadensmeldung sichtbar an der Maschine anbringen.
-	\item Schäden nur vom Fachmann beseitigen lassen.
-\end{itemize}
-
-\section{Verhalten bei Unfällen - Erste Hilfe}
-\begin{itemize}
-	\item Gerät abschalten. 
-	\item Betreuer informieren. Gegebenenfalls Rettungsdienst rufen.
-	\item Verletzten betreuen.
-\end{itemize}
-
-\todo{inhaltsverzeichnis kapott}
-\secttoc
 \tableofcontents
 
-\section{Aufbringen der Lötpaste}
-\todo{beschreiben}
+\section{Gefahren und Verhaltensregeln}
+Gefahren und wichtige Regeln sind in der Betriebsanweisung (blaue Seite) zusammengefasst. Lese diese dir aufmerksam durch; du musst die Regeln auswendig kennen, um sicher mit dem Gerät zu arbeiten!
 
+\section{Aufbringen der Lötpaste}
 Bei Hautkontakt mit Lötpaste entsprechende Stelle mit Seife abwaschen. 
 
 \begin{itemize}
 \item Gesamt 2h Zeit haben, da der Ofen nachher auch wieder aufgeräumt werden will!
 \item Platine reinigen
-\item Schablone fertigen aus Overhead-Folie mit Schneideplotter (Einweisung beachten, insbesondere darf die Tiefenbegrenzung nicht zu groß eingestellt werden und muss nach Benutzung alles wieder auf normal zurückgesetzt werden!)
+\item Schablone fertigen aus Overhead-Folie mit Schneideplotter. \\ Dazu die Plotter-Einweisung beachten, insbesondere darf die Tiefenbegrenzung nicht zu groß eingestellt werden. Nach Benutzung muss wieder auf normal zurückgestellt werden!
 \item Paste vorher wiegen (mit Deckel), Wert notieren
 \item Rakeldingsi zusammenbauen
 \item Paste aufrakeln
@@ -107,10 +52,13 @@ Bei Hautkontakt mit Lötpaste entsprechende Stelle mit Seife abwaschen.
 \item Platine bestücken, Kunststoffbauteile am besten weglassen oder mit Kapton etwas schützen
 \end{itemize}
 
+\todo{genauer beschreiben}
+
 \section{Reflow}
 \subsection{Vorbereitung des Ofens}
 \begin{itemize}
-		\item Das Zubehör, das sich im Ofen befindet, herausnehmen.
+\item Hitzeschutzhandschuhe bereitlegen: In derder Schublade Arbeitsschutz in der Werkbank finden sich gelbe Hitzeschutzhandschuhe für die T-Shirt-Presse, die auch für den Ofen verwendet werden dürfen.
+\item Das Zubehör, das sich im Ofen befindet, herausnehmen.
 		\item Temperatursensor in den Reflowcontroller stecken.
 		\item Reflowcontroller direkt in die Steckdose stecken und den Reflowofen in die Schukodose stecken, die am Reflowcontroller angeschlossen ist.
 		\item Temperatursensor gewissenhaft mit Kaptonband auf der Platine befestigen. Löst sich der Temperatursensor im Betrieb, muss der Reflowprozess in jedem Fall abgebrochen werden, da es sonst zu einer Überhitzung der Platine kommt.
@@ -120,7 +68,7 @@ Bei Hautkontakt mit Lötpaste entsprechende Stelle mit Seife abwaschen.
 \subsection{Durchführung}
 \begin{itemize}
 		\item Reflowcontroller am Hauptschalter oben rechts einschalten.
-		\item Die Ofentür darf während des gesammten Prozesses nicht geöffnet werden.
+		\item Die Ofentür darf während des gesammten Prozesses nicht geöffnet werden. \todo{Verhalten bei Störungen / Brand? Man muss die Platine sofort raustun! Hitzeschutzhandschuhe müssen bereitliegen!}
 		\item Der voreingestellte Reflowprozess wird durch drücken auf \enquote{Start} gestartet.
 		\item Während des Reflowprozesses ist der Ofen ständig zu beaufsichtigen und darauf zu achten, dass sich der Temperatursensor nicht löst. Falls sich dieser lösen sollte, mit \enquote{Stop} abbrechen. Niemals versuchen, den Sensor im Betrieb wieder zu befestigen, sondern erst vollständig abkühlen lassen.
 		\item Aktuelle Temperatur und Reflowphase werden im Display angezeigt.

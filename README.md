@@ -3,7 +3,7 @@ Reflow Ofen Einweisung
 
 Einweisung des [FAU FabLab](https://fablab.fau.de) in den [Reflow Ofen](https://fablab.fau.de/tool/reflow-ofen).
 
-Die neueste Version der Einweisung aus [github](https://github.com/fau-fablab/reflow-ofen-einweisung) ist als PDF unter https://user.fablab.fau.de/~buildserver/reflow-ofen-einweisung/Einweisung_Reflow-Ofen.pdf abrufbar.
+Die neueste Version der Einweisung aus [github](https://github.com/fau-fablab/reflow-ofen-einweisung) ist als PDF unter https://user.fablab.fau.de/~buildserver/reflow-ofen-einweisung/einweisung_reflow-ofen.pdf abrufbar.
 
 auschecken
 ----------

@@ -3,7 +3,7 @@ Reflow Ofen Einweisung
 
 Einweisung des [FAU FabLab](https://fablab.fau.de) in den [Reflow Ofen](https://fablab.fau.de/tool/reflow-ofen).
 
-Die neueste Version der Einweisung aus [github](https://github.com/fau-fablab/reflow-ofen-einweisung) ist als PDF unter https://user.fablab.fau.de/~buildserver/reflow-ofen-einweisung/einweisung_reflow-ofen.pdf abrufbar.
+Die neueste Version der Einweisung aus [github](https://github.com/fau-fablab/reflow-ofen-einweisung) ist als PDF unter https://brain.fablab.fau.de/build/reflow-ofen-einweisung/einweisung_reflow-ofen.pdf abrufbar.
 
 auschecken
 ----------
@@ -14,8 +14,8 @@ git clone --recursive git@github.com:fau-fablab/reflow-ofen-einweisung.git
 
 Technische Details zum Buildserver siehe auf macgyver `/home/buildserver/README`
 
-[![Build Status](https://user.fablab.fau.de/~buildserver/reflow-ofen-einweisung/status.svg)](https://user.fablab.fau.de/~buildserver/reflow-ofen-einweisung/)
-[![TODOs](https://user.fablab.fau.de/~buildserver/reflow-ofen-einweisung/status-todos.svg)](https://user.fablab.fau.de/~buildserver/reflow-ofen-einweisung/)
+[![Build Status](https://brain.fablab.fau.de/build/reflow-ofen-einweisung/status.svg)](https://brain.fablab.fau.de/build/reflow-ofen-einweisung/)
+[![TODOs](https://brain.fablab.fau.de/build/reflow-ofen-einweisung/status-todos.svg)](https://brain.fablab.fau.de/build/reflow-ofen-einweisung/)
 
 Lizenz
 ------

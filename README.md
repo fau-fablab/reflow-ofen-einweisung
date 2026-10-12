@@ -1,4 +1,4 @@
-Reflow-Ofen Einweisung
+Reflow-Ofen-Einweisung
 ======================
 
 Einweisung des [FAU FabLab](https://fablab.fau.de) in den [Reflow-Ofen](https://fablab.fau.de/tool/reflow-ofen) mit Reflow-Controller.
